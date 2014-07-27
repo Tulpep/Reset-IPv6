@@ -64,6 +64,4 @@ devcon.exe install nettun.inf *ISATAP
 netsh interface ipv6 reset
 gpupdate /force
 
-shutdown -r -t 1
-
 Return 0
