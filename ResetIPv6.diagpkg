@@ -5,10 +5,10 @@
     </DiagnosticIdentification>
     <DisplayInformation>
         <Parameters/>
-        <Name>Fix IPv6 transition technologies </Name>
-        <Description>Before run this pack, uninstall the incompatible software and reboot the computer. This troubleshooting pack will repair your IPv6 virtual network interfaces: 6to4 , Teredo and IPHTTPS when you get the error  "Failed to open tunnel interface".  They could be damaged by an incompatible software like Checkpoint Secure Client.  This troubleshooting pack only works for english or spanish operating system editions.</Description>
+        <Name>Reset IPv6</Name>
+        <Description>Will repair your IPv6 stack including virtual network interfaces 6to4 , Teredo and IP-HTTPS.  Before run it uninstall incompatible with IPv6 software and reboot the computer.</Description>
     </DisplayInformation>
-    <PrivacyLink>https://www.tulpep.com/</PrivacyLink>
+    <PrivacyLink>https://github.com/Tulpep/Reset-IPv6</PrivacyLink>
     <PowerShellVersion>2.0</PowerShellVersion>
     <SupportedOSVersion clientSupported="true" serverSupported="true">6.1</SupportedOSVersion>
     <Rootcauses>
@@ -17,7 +17,7 @@
             <DisplayInformation>
                 <Parameters/>
                 <Name>Failed to open IPv6 Interfaces</Name>
-                <Description>Your computer has problem accessing to your IPv6 transitions technologies interfaces.</Description>
+                <Description>Your computer has problems accessing to IPv6 transitions technologies interfaces.</Description>
             </DisplayInformation>
             <Troubleshooter>
                 <Script>
@@ -35,8 +35,8 @@
                     <ID>Resolver1</ID>
                     <DisplayInformation>
                         <Parameters/>
-                        <Name>Repair IPv6 interfaces</Name>
-                        <Description>Stay connected to the network, and if you are fixing a Direct Access scenario, stay connected to your coporate network during the entire process.</Description>
+                        <Name>Repair IPv6</Name>
+                        <Description>Stay connected to the network  during the whole process. If you are fixing a Direct Access scenario stay connected to your coporate network </Description>
                     </DisplayInformation>
                     <RequiresConsent>false</RequiresConsent>
                     <Script>
@@ -94,8 +94,8 @@
                 <ID>WantToRestart</ID>
                 <DisplayInformation>
                     <Parameters/>
-                    <Name>Do you want to restart the computer after finished the process?</Name>
-                    <Description>It is recommended to restart the computer to finish the fix. Don’t forget to close and save the programs that you are using.</Description>
+                    <Name>Do you want to restart the computer?</Name>
+                    <Description>It is recommended to restart the computer to finish the IPv6 repair. Don’t forget to close and save the programs that you are using.</Description>
                 </DisplayInformation>
                 <ContextParameters/>
                 <ExtensionPoint>
