@@ -1,0 +1,2 @@
+SDMC.EXE: Manifest compilation is complete: 0 error(s), 0 warning(s).
+SDCATALOG.EXE:Informational 0x00000000: Call to external .exe file succeeded.

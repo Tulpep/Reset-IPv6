@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dcmPS:AdvDiagnosticPackage SchemaVersion="1.0" Localized="false" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+    <DiagnosticIdentification>
+        <ID>2c777e36-c96a-4348-9a40-2e16acaa1380</ID>
+        <Version>1.0</Version>
+    </DiagnosticIdentification>
+    <DisplayInformation>
+        <Parameters />
+        <Name>
+            <dcmRS:LocalizeResourceElement comment="Comment" index="1">Fix IPv6 transition technologies </dcmRS:LocalizeResourceElement>
+        </Name>
+        <Description>
+            <dcmRS:LocalizeResourceElement comment="This is a comment" index="2">Before run this pack, uninstall the incompatible software and reboot the computer. This troubleshooting pack will repair your IPv6 virtual network interfaces: 6to4 , Teredo and IPHTTPS when you get the error  "Failed to open tunnel interface".  They could be damaged by an incompatible software like Checkpoint Secure Client.  This troubleshooting pack only works for english or spanish operating system editions.</dcmRS:LocalizeResourceElement>
+        </Description>
+    </DisplayInformation>
+    <PrivacyLink>http://resetipv6.codeplex.com/</PrivacyLink>
+    <PowerShellVersion>2.0</PowerShellVersion>
+    <SupportedOSVersion clientSupported="true" serverSupported="true">6.1</SupportedOSVersion>
+    <Rootcauses>
+        <Rootcause>
+            <ID>failedToOpen</ID>
+            <DisplayInformation>
+                <Parameters />
+                <Name>
+                    <dcmRS:LocalizeResourceElement comment="This is a comment" index="3">Failed to open IPv6 Interfaces</dcmRS:LocalizeResourceElement>
+                </Name>
+                <Description>
+                    <dcmRS:LocalizeResourceElement comment="This is a comment" index="6">Your computer has problem accessing to your IPv6 transitions technologies interfaces.</dcmRS:LocalizeResourceElement>
+                </Description>
+            </DisplayInformation>
+            <Troubleshooter>
+                <Script>
+                    <Parameters />
+                    <ProcessArchitecture>Any</ProcessArchitecture>
+                    <RequiresElevation>true</RequiresElevation>
+                    <RequiresInteractivity>false</RequiresInteractivity>
+                    <FileName>TS_failedToOpen.ps1</FileName>
+                    <ExtensionPoint />
+                </Script>
+                <ExtensionPoint />
+            </Troubleshooter>
+            <Resolvers>
+                <Resolver>
+                    <ID>Resolver1</ID>
+                    <DisplayInformation>
+                        <Parameters />
+                        <Name>
+                            <dcmRS:LocalizeResourceElement comment="This is a comment" index="4">Repair IPv6 interfaces</dcmRS:LocalizeResourceElement>
+                        </Name>
+                        <Description>
+                            <dcmRS:LocalizeResourceElement comment="This is a comment" index="5">Be sure that you have saved your work and close all your applications. Your computer will be restarted two times in order to fix the problem. Stay connected to the Internet, and if you are fixing a Direct Access scenario, to your coporate network during the entire process.</dcmRS:LocalizeResourceElement>
+                        </Description>
+                    </DisplayInformation>
+                    <RequiresConsent>true</RequiresConsent>
+                    <Script>
+                        <Parameters />
+                        <ProcessArchitecture>Any</ProcessArchitecture>
+                        <RequiresElevation>true</RequiresElevation>
+                        <RequiresInteractivity>false</RequiresInteractivity>
+                        <FileName>RS_failedToOpen.ps1</FileName>
+                        <ExtensionPoint />
+                    </Script>
+                    <ExtensionPoint />
+                </Resolver>
+            </Resolvers>
+            <Verifier></Verifier>
+            <ContextParameters />
+            <ExtensionPoint />
+        </Rootcause>
+    </Rootcauses>
+    <Interactions>
+        <SingleResponseInteractions />
+        <MultipleResponseInteractions />
+        <TextInteractions />
+        <PauseInteractions />
+        <LaunchUIInteractions />
+    </Interactions>
+    <ExtensionPoint></ExtensionPoint>
+</dcmPS:AdvDiagnosticPackage>
