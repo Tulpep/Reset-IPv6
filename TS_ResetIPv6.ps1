@@ -8,6 +8,7 @@ $RootCauseID = "failedToOpen"
 
 # Your detection Logic Here
 
+<#
 $netsh = cmd /c 'netsh interface teredo show state  & netsh interface 6to4 show state & netsh interface https show interfaces' | Out-String
 
 
@@ -32,9 +33,9 @@ else
 {
     $result = 0
 }
+#>
 
-
-$RootCauseDetected = $result
+$RootCauseDetected = $true
 
 #The following line notifies Windows Troubleshooting Platform of the status of this root cause
 update-diagrootcause -id $RootCauseId -detected $RootCauseDetected
