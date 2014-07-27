@@ -32,7 +32,7 @@
                 <Script>
                     <Parameters />
                     <ProcessArchitecture>Any</ProcessArchitecture>
-                    <RequiresElevation>true</RequiresElevation>
+                    <RequiresElevation>false</RequiresElevation>
                     <RequiresInteractivity>false</RequiresInteractivity>
                     <FileName>TS_ResetIPv6.ps1</FileName>
                     <ExtensionPoint />
@@ -48,28 +48,88 @@
                             <dcmRS:LocalizeResourceElement comment="This is a comment" index="4">Repair IPv6 interfaces</dcmRS:LocalizeResourceElement>
                         </Name>
                         <Description>
-                            <dcmRS:LocalizeResourceElement comment="This is a comment" index="5">Be sure that you have saved your work and close all your applications. Your computer will be restarted two times in order to fix the problem. Stay connected to the Internet, and if you are fixing a Direct Access scenario, stay connected to your coporate network during the entire process.</dcmRS:LocalizeResourceElement>
+                            <dcmRS:LocalizeResourceElement comment="This is a comment" index="5">Stay connected to the network, and if you are fixing a Direct Access scenario, stay connected to your coporate network during the entire process.</dcmRS:LocalizeResourceElement>
                         </Description>
                     </DisplayInformation>
-                    <RequiresConsent>true</RequiresConsent>
+                    <RequiresConsent>false</RequiresConsent>
                     <Script>
                         <Parameters />
                         <ProcessArchitecture>Any</ProcessArchitecture>
                         <RequiresElevation>true</RequiresElevation>
-                        <RequiresInteractivity>false</RequiresInteractivity>
+                        <RequiresInteractivity>true</RequiresInteractivity>
                         <FileName>RS_ResetIPv6.ps1</FileName>
                         <ExtensionPoint />
                     </Script>
-                    <ExtensionPoint />
+                    <ExtensionPoint>
+                        <InteractionIDList>
+                            <InteractionID>WantToRestart</InteractionID>
+                        </InteractionIDList>
+                    </ExtensionPoint>
                 </Resolver>
             </Resolvers>
-            <Verifier></Verifier>
+            <Verifier>
+                <Script>
+                    <Parameters />
+                    <ProcessArchitecture>Any</ProcessArchitecture>
+                    <RequiresElevation>false</RequiresElevation>
+                    <RequiresInteractivity>false</RequiresInteractivity>
+                    <FileName>VF_ResetIPv6.ps1</FileName>
+                    <ExtensionPoint />
+                </Script>
+                <ExtensionPoint />
+            </Verifier>
             <ContextParameters />
             <ExtensionPoint />
         </Rootcause>
     </Rootcauses>
     <Interactions>
-        <SingleResponseInteractions />
+        <SingleResponseInteractions>
+            <SingleResponseInteraction>
+                <AllowDynamicResponses>false</AllowDynamicResponses>
+                <Choices>
+                    <Choice>
+                        <DisplayInformation>
+                            <Parameters />
+                            <Name>
+                                <dcmRS:LocalizeResourceElement comment="This is a comment" index="8">Yes</dcmRS:LocalizeResourceElement>
+                            </Name>
+                            <Description>
+                                <dcmRS:LocalizeResourceElement comment="This is a comment" index="10">Restart</dcmRS:LocalizeResourceElement>
+                            </Description>
+                        </DisplayInformation>
+                        <Value>$true</Value>
+                        <ExtensionPoint />
+                    </Choice>
+                    <Choice>
+                        <DisplayInformation>
+                            <Parameters />
+                            <Name>
+                                <dcmRS:LocalizeResourceElement comment="This is a comment" index="9">No</dcmRS:LocalizeResourceElement>
+                            </Name>
+                            <Description>
+                                <dcmRS:LocalizeResourceElement comment="This is a comment" index="11">Do not restart</dcmRS:LocalizeResourceElement>
+                            </Description>
+                        </DisplayInformation>
+                        <Value>$false</Value>
+                        <ExtensionPoint />
+                    </Choice>
+                </Choices>
+                <ID>WantToRestart</ID>
+                <DisplayInformation>
+                    <Parameters />
+                    <Name>
+                        <dcmRS:LocalizeResourceElement comment="This is a comment" index="7">Do you want to restart the computer after finished the process?</dcmRS:LocalizeResourceElement>
+                    </Name>
+                    <Description>
+                        <dcmRS:LocalizeResourceElement comment="This is a comment" index="12">It is recommended to restart the computer to finish the fix. Don’t forget to close and save the programs that you are using.</dcmRS:LocalizeResourceElement>
+                    </Description>
+                </DisplayInformation>
+                <ContextParameters />
+                <ExtensionPoint>
+                    <NoCache></NoCache>
+                </ExtensionPoint>
+            </SingleResponseInteraction>
+        </SingleResponseInteractions>
         <MultipleResponseInteractions />
         <TextInteractions />
         <PauseInteractions />
