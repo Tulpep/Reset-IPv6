@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><dcmPS:AdvDiagnosticPackage SchemaVersion="1.0" Localized="false" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+    <DiagnosticIdentification>
+        <ID>2c777e36-c96a-4348-9a40-2e16acaa1380</ID>
+        <Version>1.0</Version>
+    </DiagnosticIdentification>
+    <DisplayInformation>
+        <Parameters/>
+        <Name>Fix IPv6 transition technologies </Name>
+        <Description>Before run this pack, uninstall the incompatible software and reboot the computer. This troubleshooting pack will repair your IPv6 virtual network interfaces: 6to4 , Teredo and IPHTTPS when you get the error  "Failed to open tunnel interface".  They could be damaged by an incompatible software like Checkpoint Secure Client.  This troubleshooting pack only works for english or spanish operating system editions.</Description>
+    </DisplayInformation>
+    <PrivacyLink>https://www.tulpep.com/</PrivacyLink>
+    <PowerShellVersion>2.0</PowerShellVersion>
+    <SupportedOSVersion clientSupported="true" serverSupported="true">6.1</SupportedOSVersion>
+    <Rootcauses>
+        <Rootcause>
+            <ID>failedToOpen</ID>
+            <DisplayInformation>
+                <Parameters/>
+                <Name>Failed to open IPv6 Interfaces</Name>
+                <Description>Your computer has problem accessing to your IPv6 transitions technologies interfaces.</Description>
+            </DisplayInformation>
+            <Troubleshooter>
+                <Script>
+                    <Parameters/>
+                    <ProcessArchitecture>Any</ProcessArchitecture>
+                    <RequiresElevation>true</RequiresElevation>
+                    <RequiresInteractivity>false</RequiresInteractivity>
+                    <FileName>TS_ResetIPv6.ps1</FileName>
+                    <ExtensionPoint/>
+                </Script>
+                <ExtensionPoint/>
+            </Troubleshooter>
+            <Resolvers>
+                <Resolver>
+                    <ID>Resolver1</ID>
+                    <DisplayInformation>
+                        <Parameters/>
+                        <Name>Repair IPv6 interfaces</Name>
+                        <Description>Be sure that you have saved your work and close all your applications. Your computer will be restarted two times in order to fix the problem. Stay connected to the Internet, and if you are fixing a Direct Access scenario, stay connected to your coporate network during the entire process.</Description>
+                    </DisplayInformation>
+                    <RequiresConsent>true</RequiresConsent>
+                    <Script>
+                        <Parameters/>
+                        <ProcessArchitecture>Any</ProcessArchitecture>
+                        <RequiresElevation>true</RequiresElevation>
+                        <RequiresInteractivity>false</RequiresInteractivity>
+                        <FileName>RS_ResetIPv6.ps1</FileName>
+                        <ExtensionPoint/>
+                    </Script>
+                    <ExtensionPoint/>
+                </Resolver>
+            </Resolvers>
+            <Verifier></Verifier>
+            <ContextParameters/>
+            <ExtensionPoint/>
+        </Rootcause>
+    </Rootcauses>
+    <Interactions>
+        <SingleResponseInteractions/>
+        <MultipleResponseInteractions/>
+        <TextInteractions/>
+        <PauseInteractions/>
+        <LaunchUIInteractions/>
+    </Interactions>
+    <ExtensionPoint></ExtensionPoint>
+</dcmPS:AdvDiagnosticPackage>

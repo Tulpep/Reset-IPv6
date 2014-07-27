@@ -24,6 +24,10 @@ elseif($netsh -match "interface creation failure")
 {
     $result = 1   
 }
+elseif($netsh -match "no se pudo crear")
+{
+    $result = 1   
+}
 else
 {
     $result = 0
