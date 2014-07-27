@@ -5,6 +5,7 @@ copy ResetIpv6.cdf output\ResetIpv6.cdf
 copy ResetIPv6.diagpkg output\ResetIPv6.diagpkg
 copy RS_ResetIPv6.ps1 output\RS_ResetIPv6.ps1
 copy TS_ResetIPv6.ps1 output\TS_ResetIPv6.ps1
+copy VF_ResetIPv6.ps1 output\VF_ResetIPv6.ps1
 copy devcon32.exe output\devcon32.exe
 copy devcon64.exe output\devcon64.exe
 
@@ -26,3 +27,4 @@ signtool sign /t http://timestamp.verisign.com/scripts/timstamp.dll /sha1 b6c83d
 cd..
 
 copy output\cab\ResetIPv6.diagcab ResetIPv6.diagcab
+rd /s /q output

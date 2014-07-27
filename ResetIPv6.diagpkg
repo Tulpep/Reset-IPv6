@@ -23,7 +23,7 @@
                 <Script>
                     <Parameters/>
                     <ProcessArchitecture>Any</ProcessArchitecture>
-                    <RequiresElevation>true</RequiresElevation>
+                    <RequiresElevation>false</RequiresElevation>
                     <RequiresInteractivity>false</RequiresInteractivity>
                     <FileName>TS_ResetIPv6.ps1</FileName>
                     <ExtensionPoint/>
@@ -36,27 +36,73 @@
                     <DisplayInformation>
                         <Parameters/>
                         <Name>Repair IPv6 interfaces</Name>
-                        <Description>Be sure that you have saved your work and close all your applications. Your computer will be restarted two times in order to fix the problem. Stay connected to the Internet, and if you are fixing a Direct Access scenario, stay connected to your coporate network during the entire process.</Description>
+                        <Description>Stay connected to the network, and if you are fixing a Direct Access scenario, stay connected to your coporate network during the entire process.</Description>
                     </DisplayInformation>
-                    <RequiresConsent>true</RequiresConsent>
+                    <RequiresConsent>false</RequiresConsent>
                     <Script>
                         <Parameters/>
                         <ProcessArchitecture>Any</ProcessArchitecture>
                         <RequiresElevation>true</RequiresElevation>
-                        <RequiresInteractivity>false</RequiresInteractivity>
+                        <RequiresInteractivity>true</RequiresInteractivity>
                         <FileName>RS_ResetIPv6.ps1</FileName>
                         <ExtensionPoint/>
                     </Script>
-                    <ExtensionPoint/>
+                    <ExtensionPoint>
+                        
+                    </ExtensionPoint>
                 </Resolver>
             </Resolvers>
-            <Verifier></Verifier>
+            <Verifier>
+                <Script>
+                    <Parameters/>
+                    <ProcessArchitecture>Any</ProcessArchitecture>
+                    <RequiresElevation>false</RequiresElevation>
+                    <RequiresInteractivity>false</RequiresInteractivity>
+                    <FileName>VF_ResetIPv6.ps1</FileName>
+                    <ExtensionPoint/>
+                </Script>
+                <ExtensionPoint/>
+            </Verifier>
             <ContextParameters/>
             <ExtensionPoint/>
         </Rootcause>
     </Rootcauses>
     <Interactions>
-        <SingleResponseInteractions/>
+        <SingleResponseInteractions>
+            <SingleResponseInteraction>
+                <AllowDynamicResponses>false</AllowDynamicResponses>
+                <Choices>
+                    <Choice>
+                        <DisplayInformation>
+                            <Parameters/>
+                            <Name>Yes</Name>
+                            <Description>Restart</Description>
+                        </DisplayInformation>
+                        <Value>$true</Value>
+                        <ExtensionPoint/>
+                    </Choice>
+                    <Choice>
+                        <DisplayInformation>
+                            <Parameters/>
+                            <Name>No</Name>
+                            <Description>Do not restart</Description>
+                        </DisplayInformation>
+                        <Value>$false</Value>
+                        <ExtensionPoint/>
+                    </Choice>
+                </Choices>
+                <ID>WantToRestart</ID>
+                <DisplayInformation>
+                    <Parameters/>
+                    <Name>Do you want to restart the computer after finished the process?</Name>
+                    <Description>It is recommended to restart the computer to finish the fix. Don’t forget to close and save the programs that you are using.</Description>
+                </DisplayInformation>
+                <ContextParameters/>
+                <ExtensionPoint>
+                    <NoCache></NoCache>
+                </ExtensionPoint>
+            </SingleResponseInteraction>
+        </SingleResponseInteractions>
         <MultipleResponseInteractions/>
         <TextInteractions/>
         <PauseInteractions/>
