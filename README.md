@@ -11,7 +11,7 @@ Use this troubleshooting pack when you have errors like *Failed to open tunnel a
 
 If even after uninstall incompatible software the IPv6 transition technologies interfaces are unusable run this troubleshooting pack. 
 
-##[Download Reset IPv6](ResetIPv6.exe)
+##[Download Reset IPv6](https://github.com/Tulpep/Reset-IPv6/releases/download/v1.0/ResetIPv6.exe)
 
 ---
 
