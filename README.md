@@ -12,7 +12,7 @@ Use this troubleshooting pack when you have errors like *Failed to open tunnel a
 
 ![Failed to open tunnel adapter](ProjectDescription/ErrorTeredo.png)
 
-If, even after uninstall incompatible software, the IPv6 transition technologies interfaces are unusable, run this troubleshooting pack. 
+If, even after uninstalling incompatible software, the IPv6 transition technologies interfaces are unusable, run this troubleshooting pack. 
 
 Reset IPv6:
 * Uses the Windows Troubleshooting platform.
