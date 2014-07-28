@@ -14,8 +14,6 @@ Use this troubleshooting pack when you have errors like *Failed to open tunnel a
 
 If even after uninstall incompatible software, the IPv6 transition technologies interfaces are unusable, run this troubleshooting pack. 
 
----
-
 * Uses the Windows Troubleshooting platform.
 * Uninstall and install again all Teredo, 6to4, IPHTTPS and ISATAP devices. 
 * Reset the IPv6 stack to default settings.
@@ -31,4 +29,4 @@ If even after uninstall incompatible software, the IPv6 transition technologies 
 * Requires administrative privileges.
 
 ---
-###[Download now](https://github.com/Tulpep/Reset-IPv6/releases/download/v1.0/ResetIPv6.exe)
+##[Download now](https://github.com/Tulpep/Reset-IPv6/releases/download/v1.0/ResetIPv6.exe)
