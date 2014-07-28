@@ -16,7 +16,7 @@ If, even after uninstall incompatible software, the IPv6 transition technologies
 
 Reset IPv6:
 * Uses the Windows Troubleshooting platform.
-* Uninstalls and install again all Teredo, 6to4, IPHTTPS and ISATAP devices. 
+* Uninstalls and install again all Teredo, 6to4, IP-HTTPS and ISATAP devices. 
 * Resets the IPv6 stack to default settings.
 * Triggers a full group policy update.
 * Works in x86 and amd64 of all editions of:
