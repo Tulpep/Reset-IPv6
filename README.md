@@ -19,12 +19,12 @@ If even after uninstall incompatible software, the IPv6 transition technologies 
 * Reset the IPv6 stack to default settings.
 * Triggers a full group policy update.
 * Works in x86 and amd64 of all editions of:
-..* Windows 7
-..* Windows Server 2008 R2
-..* Windows 8
-..* Windows 8.1
-..* Windows Server 2012
-..* Windows Server 2012 R2
+ * Windows 7
+ * Windows Server 2008 R2
+ * Windows 8
+ * Windows 8.1
+ * Windows Server 2012
+ * Windows Server 2012 R2
 * It's currently only in English but is capable to fix issues in all operating system languages.
 * Requires administrative privileges.
 
