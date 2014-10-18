@@ -12,7 +12,7 @@ clone_folder: c:\projects\myproject
 
 # scripts that run after cloning repository
 install:
-  - build.bat
+  - ps: .\build.bat
 
 # to disable automatic builds
 build: off
