@@ -1,25 +1,25 @@
-$makeCatPath = ".\build-resources\MakeCat.Exe"
-$outputFolder = ".\build-folder"
+$resourcesPath = ".\build-resources"
+$buildFolder = ".\build-folder"
 
-If (Test-Path $outputFolder){
-	Remove-Item $outputFolder -Recurse
+If (Test-Path $buildFolder){
+	Remove-Item $buildFolder -Recurse
 }
-New-Item -Path $outputFolder -ItemType directory
+New-Item -Path $buildFolder -ItemType directory
 
-Copy-Item ResetIpv6.cdf $outputFolder
-Copy-Item ResetIPv6.diagpkg $outputFolder
-Copy-Item RS_ResetIPv6.ps1 $outputFolder
-Copy-Item TS_ResetIPv6.ps1 $outputFolder
-Copy-Item VF_ResetIPv6.ps1 $outputFolder
-Copy-Item devcon32.exe $outputFolder
-Copy-Item devcon64.exe $outputFolder
+Copy-Item ResetIpv6.cdf $buildFolder
+Copy-Item ResetIPv6.diagpkg $buildFolder
+Copy-Item RS_ResetIPv6.ps1 $buildFolder
+Copy-Item TS_ResetIPv6.ps1 $buildFolder
+Copy-Item VF_ResetIPv6.ps1 $buildFolder
+Copy-Item devcon32.exe $buildFolder
+Copy-Item devcon64.exe $buildFolder
 
-$makeCatParamters = "-v " + $outputFolder + "\ResetIpv6.cdf"
-Start-Process -FilePath $makeCatPath -ArgumentList $makeCatParamters
-Remove-Item ($outputFolder + "\ResetIpv6.cdf")
+$makeCatParamters = "-v " + $buildFolder + "\ResetIpv6.cdf"
+Start-Process -FilePath ($resourcesPath + "\MakeCat.Exe") -ArgumentList $makeCatParamters
+Remove-Item ($buildFolder + "\ResetIpv6.cdf")
 
 
-throw "Build not finished yet"
+#throw "Build not finished yet"
 
 
 
