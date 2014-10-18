@@ -1,6 +1,5 @@
-Reset-IPv6
+Reset-IPv6 [![Build Status](https://ci.appveyor.com/api/projects/status/github/Tulpep/Reset-IPv6)](https://ci.appveyor.com/project/tulpep/Reset-IPv6)
 ==========
-![Build Status](https://ci.appveyor.com/api/projects/status/github/Tulpep/Reset-IPv6)
 
 ### Troubleshooting Pack to fully reset the Windows IPv6 Stack.
 
