@@ -22,6 +22,8 @@ Start-Process -FilePath ($resourcesPath + "\MakeCat.Exe") -ArgumentList "-v Rese
 Remove-Item ($buildFolder + "\ResetIpv6.cdf")
 
 
+Write-Host Digitally signing the catalog
+Start-Process -FilePath ($resourcesPath + "\signtool.Exe") -ArgumentList "sign /t http://timestamp.verisign.com/scripts/timstamp.dll /sha1 b6c83dfa006475aec9e458a48696c1c42ff1b5c4 DiagPackage.cat" -WorkingDirectory $buildFolder -Wait
 #throw "Build not finished yet"
 
 
