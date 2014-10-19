@@ -6,7 +6,7 @@ Write-Host Deleting old build folder
 If (Test-Path $buildFolder){
 	Remove-Item $buildFolder -Recurse
 }
-New-Item -Path $buildFolder -ItemType directory
+New-Item -Path $buildFolder -ItemType directory | Out-Null
 
 Write-Host Copying files to build folder
 Copy-Item ResetIpv6.cdf $buildFolder
@@ -18,8 +18,7 @@ Copy-Item devcon32.exe $buildFolder
 Copy-Item devcon64.exe $buildFolder
 
 Write-Host Creating Windows Catalog File
-$makeCatParamters = "-v " + $buildFolder + "\ResetIpv6.cdf"
-Start-Process -FilePath ($resourcesPath + "\MakeCat.Exe") -ArgumentList $makeCatParamters
+Start-Process -FilePath ($resourcesPath + "\MakeCat.Exe") -ArgumentList "-v ResetIpv6.cdf" -WorkingDirectory $buildFolder -Wait
 Remove-Item ($buildFolder + "\ResetIpv6.cdf")
 
 
