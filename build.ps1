@@ -41,8 +41,15 @@ Write-Output "Digitally signing the cab"
 Start-Process -FilePath ($resourcesPath + "\signtool.Exe") -ArgumentList "sign /t http://timestamp.verisign.com/scripts/timstamp.dll /sha1 b6c83dfa006475aec9e458a48696c1c42ff1b5c4 ResetIPv6.diagcab" -Wait
 
 
-#throw "Build not finished yet"
-
+$validSiganture = (Get-AuthenticodeSignature -FilePath "ResetIPv6.diagcab" | ? { $_.Status -eq "Valid" }) -ne $null
+If($validSiganture -eq $true)
+{
+    Write-Output "Troubleshooting packaged created with name ResetIPv6.diagcab"
+}
+else
+{
+    throw "The Diagcab file created does not have a valid signature"
+}
 
 
 
