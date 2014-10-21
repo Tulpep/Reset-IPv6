@@ -7,9 +7,6 @@ version: 1.0.{build}
 init:
   - git config --global core.autocrlf input
 
-# clone directory
-clone_folder: c:\projects\myproject
-
 # scripts that run after cloning repository
 install:
   - ps: .\build.ps1
