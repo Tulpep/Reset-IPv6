@@ -4,7 +4,7 @@ Reset-IPv6 [![Build Status](https://ci.appveyor.com/api/projects/status/github/T
 ### Troubleshooting Pack to fully reset the Windows IPv6 Stack.
 
 ![Screenshot](ProjectDescription/Scheenshot.png)
-##[Download now](https://github.com/Tulpep/Reset-IPv6/releases/download/V2.0/ResetIPv6.diagcab)
+##[Download now](https://github.com/Tulpep/Reset-IPv6/releases/download/2.0.13/ResetIPv6.diagcab)
 
 Sometimes due to incompatible with IPv6 software, like Checkpoint Secure Client, the Windows IPv6 stack is broken. The virtual IPv6 interfaces (ISATAP, 6to4, Teredo and IP-HTTPS) stop working.These interfaces are needed by technologies like Direct Access to work.
 
