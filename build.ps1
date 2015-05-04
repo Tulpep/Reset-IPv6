@@ -23,7 +23,7 @@ Remove-Item ($buildFolder + "\ResetIpv6.cdf")
 
 
 Write-Output "Digitally signing the catalog"
-Start-Process -FilePath ($resourcesPath + "\signtool.Exe") -ArgumentList "sign /t http://timestamp.verisign.com/scripts/timstamp.dll /sha1 b6c83dfa006475aec9e458a48696c1c42ff1b5c4 DiagPackage.cat" -WorkingDirectory $buildFolder -Wait
+Start-Process -FilePath ($resourcesPath + "\signtool.Exe") -ArgumentList "sign /t http://timestamp.digicert.com  /sha1 5616f9befb9f16c4fbf0ef13022faf624363a2df DiagPackage.cat" -WorkingDirectory $buildFolder -Wait
 
 
 Write-Output "Creating Cabinet File .diagcab"
@@ -38,7 +38,7 @@ Remove-Item $buildFolder -Recurse
 
 
 Write-Output "Digitally signing the cab"
-Start-Process -FilePath ($resourcesPath + "\signtool.Exe") -ArgumentList "sign /t http://timestamp.verisign.com/scripts/timstamp.dll /sha1 b6c83dfa006475aec9e458a48696c1c42ff1b5c4 ResetIPv6.diagcab" -Wait
+Start-Process -FilePath ($resourcesPath + "\signtool.Exe") -ArgumentList "sign /t http://timestamp.digicert.com  /sha1 5616f9befb9f16c4fbf0ef13022faf624363a2df ResetIPv6.diagcab" -Wait
 
 
 if((Test-Path "ResetIPv6.diagcab") -eq $true)
@@ -60,9 +60,3 @@ else
 {
     Write-Output "CAUTION. You are not you are not using a valid digital signature"
 }
-
-
-
-
-
-
