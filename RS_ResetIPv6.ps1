@@ -75,7 +75,7 @@ devcon.exe install nettun.inf *ISATAP
 Write-DiagProgress -Activity "Resetting IPv6 settings" -Status "Netsh interface ipv6 reset"
 netsh interface ipv6 reset
 Write-DiagProgress -Activity "Updating group policies" -Status "GPUpdate /Force"
-gpupdate /force
+gpupdate /force /wait:0
 
 $input = Get-DiagInput -Id "WantToRestart"
 if($input -eq $true)
