@@ -30,4 +30,4 @@ Reset IPv6:
 * Requires administrative privileges.
 
 ---
-##[Download now](https://github.com/Tulpep/Reset-IPv6/releases/download/V2.0/ResetIPv6.diagcab)
+## [Download now](https://github.com/Tulpep/Reset-IPv6/releases/download/V2.0/ResetIPv6.diagcab)
